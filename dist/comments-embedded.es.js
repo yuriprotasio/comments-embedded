@@ -9,10 +9,10 @@ var S = { exports: {} }, _ = {};
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-var L;
+var U;
 function ae() {
-  if (L) return _;
-  L = 1;
+  if (U) return _;
+  U = 1;
   var i = Symbol.for("react.transitional.element"), b = Symbol.for("react.fragment");
   function d(m, n, s) {
     var u = null;
@@ -78,7 +78,7 @@ function se() {
             return e = e.displayName, e || (e = r.displayName || r.name || "", e = e !== "" ? "ForwardRef(" + e + ")" : "ForwardRef"), e;
           case Z:
             return r = e.displayName || null, r !== null ? r : i(e.type) || "Memo";
-          case C:
+          case I:
             r = e._payload, e = e._init;
             try {
               return i(e(r));
@@ -109,7 +109,7 @@ function se() {
     }
     function m(e) {
       if (e === v) return "<>";
-      if (typeof e == "object" && e !== null && e.$$typeof === C)
+      if (typeof e == "object" && e !== null && e.$$typeof === I)
         return "<...>";
       try {
         var r = i(e);
@@ -146,7 +146,7 @@ function se() {
     }
     function w() {
       var e = i(this.type);
-      return I[e] || (I[e] = !0, console.error(
+      return z[e] || (z[e] = !0, console.error(
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
@@ -200,7 +200,7 @@ function se() {
         var p = Object.keys(r).filter(function(re) {
           return re !== "key";
         });
-        o = 0 < p.length ? "{key: someKey, " + p.join(": ..., ") + ": ...}" : "{key: someKey}", W[a + o] || (p = 0 < p.length ? "{" + p.join(": ..., ") + ": ...}" : "{}", console.error(
+        o = 0 < p.length ? "{key: someKey, " + p.join(": ..., ") + ": ...}" : "{key: someKey}", L[a + o] || (p = 0 < p.length ? "{" + p.join(": ..., ") + ": ...}" : "{}", console.error(
           `A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
@@ -211,7 +211,7 @@ React keys must be passed directly to JSX without using spread:
           a,
           p,
           a
-        ), W[a + o] = !0);
+        ), L[a + o] = !0);
       }
       if (a = null, t !== void 0 && (d(t), a = "" + t), u(r) && (d(r.key), a = "" + r.key), "key" in r) {
         t = {};
@@ -235,7 +235,7 @@ React keys must be passed directly to JSX without using spread:
     function k(e) {
       typeof e == "object" && e !== null && e.$$typeof === O && e._store && (e._store.validated = 1);
     }
-    var R = te, O = Symbol.for("react.transitional.element"), l = Symbol.for("react.portal"), v = Symbol.for("react.fragment"), J = Symbol.for("react.strict_mode"), q = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), G = Symbol.for("react.context"), H = Symbol.for("react.forward_ref"), X = Symbol.for("react.suspense"), B = Symbol.for("react.suspense_list"), Z = Symbol.for("react.memo"), C = Symbol.for("react.lazy"), Q = Symbol.for("react.activity"), K = Symbol.for("react.client.reference"), x = R.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, Y = Object.prototype.hasOwnProperty, ee = Array.isArray, A = console.createTask ? console.createTask : function() {
+    var R = te, O = Symbol.for("react.transitional.element"), l = Symbol.for("react.portal"), v = Symbol.for("react.fragment"), J = Symbol.for("react.strict_mode"), q = Symbol.for("react.profiler"), V = Symbol.for("react.consumer"), G = Symbol.for("react.context"), H = Symbol.for("react.forward_ref"), X = Symbol.for("react.suspense"), B = Symbol.for("react.suspense_list"), Z = Symbol.for("react.memo"), I = Symbol.for("react.lazy"), Q = Symbol.for("react.activity"), K = Symbol.for("react.client.reference"), x = R.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, Y = Object.prototype.hasOwnProperty, ee = Array.isArray, A = console.createTask ? console.createTask : function() {
       return null;
     };
     R = {
@@ -243,10 +243,10 @@ React keys must be passed directly to JSX without using spread:
         return e();
       }
     };
-    var $, I = {}, z = R["react-stack-bottom-frame"].bind(
+    var $, z = {}, F = R["react-stack-bottom-frame"].bind(
       R,
       s
-    )(), F = A(m(s)), W = {};
+    )(), W = A(m(s)), L = {};
     T.Fragment = v, T.jsx = function(e, r, t, o, f) {
       var c = 1e4 > x.recentlyCreatedOwnerStacks++;
       return g(
@@ -256,8 +256,8 @@ React keys must be passed directly to JSX without using spread:
         !1,
         o,
         f,
-        c ? Error("react-stack-top-frame") : z,
-        c ? A(m(e)) : F
+        c ? Error("react-stack-top-frame") : F,
+        c ? A(m(e)) : W
       );
     }, T.jsxs = function(e, r, t, o, f) {
       var c = 1e4 > x.recentlyCreatedOwnerStacks++;
@@ -268,17 +268,17 @@ React keys must be passed directly to JSX without using spread:
         !0,
         o,
         f,
-        c ? Error("react-stack-top-frame") : z,
-        c ? A(m(e)) : F
+        c ? Error("react-stack-top-frame") : F,
+        c ? A(m(e)) : W
       );
     };
   }()), T;
 }
-var U;
+var D;
 function ce() {
-  return U || (U = 1, process.env.NODE_ENV === "production" ? S.exports = ae() : S.exports = se()), S.exports;
+  return D || (D = 1, process.env.NODE_ENV === "production" ? S.exports = ae() : S.exports = se()), S.exports;
 }
-var D = ce();
+var C = ce();
 const ue = ({ workspaceId: i, pageUrl: b, pageId: d, pageTitle: m }) => {
   const n = ne(), [s, u] = y(), [E, w] = y("0px"), [h, g] = y(!1);
   function k() {
@@ -292,10 +292,13 @@ const ue = ({ workspaceId: i, pageUrl: b, pageId: d, pageTitle: m }) => {
       l != null && l.commentsSize && w(((v = l == null ? void 0 : l.commentsSize) == null ? void 0 : v.height) + 15);
     }, !1), g(!0));
   }, []), // @ts-ignore
-  /* @__PURE__ */ D.jsxs("div", { ref: n, style: { position: "relative", left: 0 }, children: [
-    "ENVIRONMENT: ",
+  /* @__PURE__ */ C.jsxs("div", { ref: n, style: { position: "relative", left: 0 }, children: [
+    "URL: ",
     "http://localhost:3002",
-    h ? /* @__PURE__ */ D.jsx(
+    /* @__PURE__ */ C.jsx("br", {}),
+    "ENVIRONMENT: ",
+    "PRODUCTION",
+    h ? /* @__PURE__ */ C.jsx(
       "iframe",
       {
         style: { zIndex: 2147483647, width: s, minHeight: "480px", height: E },
