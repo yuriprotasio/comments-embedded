@@ -1,1 +1,1 @@
-export default './Comments';
+export {default} from './Comments';
