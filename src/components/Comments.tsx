@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { CommentsEmbeddedProps } from "./Comments.types";
 
 const Comments: React.FC<CommentsEmbeddedProps> = ({ workspaceId, pageUrl, pageId, pageTitle }) => {
@@ -16,7 +16,7 @@ const Comments: React.FC<CommentsEmbeddedProps> = ({ workspaceId, pageUrl, pageI
     // ref.current.contentWindow.postMessage('oraora', "*");
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     // @ts-ignore
     setWidth(embedContainer?.current?.offsetWidth || 0)
     // @ts-ignore
