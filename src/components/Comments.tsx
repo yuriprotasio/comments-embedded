@@ -36,7 +36,8 @@ const Comments: React.FC<CommentsEmbeddedProps> = ({ workspaceId, pageUrl, pageI
   return (
     // @ts-ignore
     <div ref={embedContainer} style={{position: 'relative', left: 0}}>
-      ENVIRONMENT: {import.meta.env.VITE_COMMENTS_UI_URL}
+      URL: {import.meta.env.VITE_COMMENTS_UI_URL}<br/>
+      ENVIRONMENT: {import.meta.env.VITE_NODE_ENV}
       {listeningHeightResize ? <iframe style={{zIndex: 2147483647, width, minHeight: '480px', height }}
               src={`${import.meta.env.VITE_COMMENTS_UI_URL}/comments?workspaceId=${workspaceId}
               &pageUrl=${pageUrl}&pageId=${pageId}&pageTitle=${pageTitle}`}
