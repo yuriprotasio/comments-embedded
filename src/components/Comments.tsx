@@ -39,9 +39,9 @@ const Comments: React.FC<CommentsEmbeddedProps> = ({ workspaceId, pageUrl, pageI
       URL: {import.meta.env.VITE_COMMENTS_UI_URL}<br/>
       ENVIRONMENT: {import.meta.env.VITE_NODE_ENV}
       {listeningHeightResize ? <iframe style={{zIndex: 2147483647, width, minHeight: '480px', height }}
-              src={`${import.meta.env.VITE_COMMENTS_UI_URL}/comments?workspaceId=${workspaceId}
-              &pageUrl=${pageUrl}&pageId=${pageId}&pageTitle=${pageTitle}`}
-              width="100%" height="100%" frameBorder="0" scrolling="no"></iframe> : ''}
+        src={`${import.meta.env.VITE_COMMENTS_UI_URL}/comments?workspaceId=${workspaceId}
+&pageUrl=${pageUrl}&pageId=${pageId}&pageTitle=${pageTitle}`}
+width="100%" height="100%" frameBorder="0" scrolling="no"></iframe> : ''}
     </div>
   )
 }

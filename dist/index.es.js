@@ -290,7 +290,7 @@ const se = ({ workspaceId: s, pageUrl: b, pageId: d, pageTitle: m }) => {
       {
         style: { zIndex: 2147483647, width: c, minHeight: "480px", height: E },
         src: `http://localhost:3002/comments?workspaceId=${s}
-              &pageUrl=${b}&pageId=${d}&pageTitle=${m}`,
+&pageUrl=${b}&pageId=${d}&pageTitle=${m}`,
         width: "100%",
         height: "100%",
         frameBorder: "0",
