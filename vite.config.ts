@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "index.ts"),
-      name: "ViteButton",
+      name: "Comments",
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
@@ -20,7 +20,7 @@ export default defineConfig({
       },
     },
     sourcemap: true,
-    emptyOutDir: true,
+    emptyOutDir: true
   },
   plugins: [react(), dts()],
 });
